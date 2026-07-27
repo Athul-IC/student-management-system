@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"d:/Xampp/htdocs/student-management-system\" status --porcelain)"
+    ]
+  }
+}
