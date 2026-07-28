@@ -16,23 +16,23 @@ USE if0_42423949_demo_student_management_system;
 CREATE TABLE users
 (
     id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    uuid CHAR(36) NOT NULL UNIQUE,
+    uuid VARCHAR(36)  NULL UNIQUE,
 
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
+    first_name VARCHAR(100)  NULL,
+    last_name VARCHAR(100)  NULL,
 
-    email VARCHAR(150) NOT NULL UNIQUE,
+    email VARCHAR(150)  NULL UNIQUE,
     phone VARCHAR(20) DEFAULT NULL,
 
-    password VARCHAR(255) NOT NULL,
+    password VARCHAR(255)  NULL,
 
     address TEXT DEFAULT NULL,
 
     photo VARCHAR(255) DEFAULT NULL,
 
-    role ENUM('admin','management') NOT NULL DEFAULT 'management',
+    role ENUM('admin','management')  NULL DEFAULT 'management',
 
-    status TINYINT(1) NOT NULL DEFAULT 1,
+    status TINYINT(1)  NULL DEFAULT 1,
 
     invitation_sent_at TIMESTAMP NULL DEFAULT NULL,
     invitation_accepted_at TIMESTAMP NULL DEFAULT NULL,
@@ -45,3 +45,11 @@ CREATE TABLE users
 
     deleted_at TIMESTAMP NULL DEFAULT NULL
 );
+
+
+CREATE TABLE STUDENTS 
+(
+    ID BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    UUID VARCHAR(36) NULL UNIQUE,
+    ADMISSION_NO VARCHAR(20) NULL,
+)
