@@ -1,4 +1,5 @@
 <?php
+
 $env = [];
 foreach (file(__DIR__ . '/../.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
     if (str_starts_with(trim($line), '#') || !str_contains($line, '=')) {
@@ -16,7 +17,7 @@ $port= $env['DB_PORT'];
 
 try {
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4",
         $username,
         $password
     );
