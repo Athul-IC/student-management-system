@@ -22,9 +22,9 @@ jobs:
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           local-dir: ./
           exclude: |
-            **/.git*
+            **/.git/**
             **/.github/**
-            **/README.md
+            README.md
             **/.gitignore
             **/node_modules/**
             **/.vscode/**
