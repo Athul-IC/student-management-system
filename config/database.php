@@ -15,6 +15,15 @@ $password= $env['DB_PASSWORD'];
 $dbname= $env['DB_DATABASE'];
 $port= $env['DB_PORT'];
 
+echo "<pre>";
+print_r([
+    'host' => $host,
+    'port' => $port,
+    'database' => $dbname,
+    'username' => $username,
+]);
+exit;
+
 try {
     $pdo = new PDO(
         "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4",
